@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photos | Plains &amp; Pour Coffee</title>
+  <meta name="description" content="Photos of the Plains & Pour coffee shop, drinks and pastries.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== Header / navigation (same on every page) ===== -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="logo" href="index.html">
+        <img src="images/logo.svg" alt="" width="36" height="36">
+        Plains <span>&amp;</span> Pour
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html" aria-current="page">Photos</a></li>
+        <li><a href="hours.html">Hours &amp; Location</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Photos</span>
+        <h1>A look inside</h1>
+        <p>Tap any photo to see it larger.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- To add a photo: copy one <figure> block and change the src, alt, and caption -->
+        <div class="gallery">
+          <figure><button aria-label="Enlarge photo"><img src="images/storefront.svg" alt="Brick storefront with an orange awning" loading="lazy"></button><figcaption>Our home just off College Street</figcaption></figure>
+          <figure><button aria-label="Enlarge photo"><img src="images/interior.svg" alt="Coffee shop interior with pendant lights" loading="lazy"></button><figcaption>The front room: best seats in town for studying</figcaption></figure>
+          <figure><button aria-label="Enlarge photo"><img src="images/latte.svg" alt="Latte with rosetta art" loading="lazy"></button><figcaption>Rosetta latte art</figcaption></figure>
+          <figure><button aria-label="Enlarge photo"><img src="images/coldbrew.svg" alt="Iced cold brew with an orange straw" loading="lazy"></button><figcaption>War Eagle Cold Brew</figcaption></figure>
+          <figure><button aria-label="Enlarge photo"><img src="images/pourover.svg" alt="Pour-over coffee being brewed" loading="lazy"></button><figcaption>Slow mornings and pour-overs</figcaption></figure>
+          <figure><button aria-label="Enlarge photo"><img src="images/pastry.svg" alt="Croissant and biscuit on a plate" loading="lazy"></button><figcaption>Fresh from the oven</figcaption></figure>
+          <figure><button aria-label="Enlarge photo"><img src="images/beans.svg" alt="Bag of Ethiopian Yirgacheffe beans" loading="lazy"></button><figcaption>This month's single origin</figcaption></figure>
+          <figure><button aria-label="Enlarge photo"><img src="images/hero.svg" alt="Cappuccino on a saucer" loading="lazy"></button><figcaption>The classic cappuccino</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox: hidden until a photo is clicked -->
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+      <button class="lightbox-close" aria-label="Close">&times;</button>
+      <img src="" alt="">
+      <p></p>
+    </div>
+  </main>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Plains &amp; Pour Coffee</h3>
+        <p>123 Example Ave<br>Auburn, AL 36830<br><a href="tel:+13345550142">(334) 555-0142</a></p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Photos</a></li>
+          <li><a href="hours.html">Hours &amp; Location</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Say hello</h3>
+        <ul>
+          <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">© <span data-year></span> Plains &amp; Pour Coffee · A demo website, not a real business.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

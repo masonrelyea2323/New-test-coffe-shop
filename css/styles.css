@@ -1,0 +1,474 @@
+/* ==========================================================
+   Plains & Pour Coffee — shared stylesheet
+   Every page links to this one file, so a change here
+   (a color, a font size) updates the whole site at once.
+   ========================================================== */
+
+/* ---------- 1. Design tokens (colors, fonts, spacing) ---------- */
+:root {
+  --navy: #0c2340;        /* a nod to Auburn's navy... */
+  --orange: #e87722;      /* ...and orange */
+  --orange-dark: #c25f12;
+  --cream: #fbf6ee;
+  --latte: #ead9c1;
+  --espresso: #3b2416;
+  --text: #2a211b;
+  --muted: #6d6158;
+  --white: #ffffff;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(12, 35, 64, 0.12);
+  --max-width: 1120px;
+}
+
+/* ---------- 2. Base / reset ---------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--cream);
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--orange-dark); }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--navy);
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); }
+h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); }
+h3 { font-size: 1.3rem; }
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section { padding: 72px 0; }
+.section--alt { background: var(--latte); }
+
+.section-intro {
+  max-width: 640px;
+  margin: 0 auto 40px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange-dark);
+  margin-bottom: 8px;
+}
+
+/* ---------- 3. Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.btn--primary { background: var(--orange); color: var(--white); }
+.btn--primary:hover { background: var(--orange-dark); }
+
+.btn--ghost { border: 2px solid var(--white); color: var(--white); }
+.btn--ghost:hover { background: rgba(255, 255, 255, 0.12); }
+
+/* ---------- 4. Header & navigation ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--navy);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+}
+.logo span { color: var(--orange); }
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  display: block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-links a:hover { background: rgba(255, 255, 255, 0.1); }
+
+/* aria-current="page" is set on the link for the page you're on */
+.nav-links a[aria-current="page"] {
+  color: var(--orange);
+  box-shadow: inset 0 -2px 0 var(--orange);
+  border-radius: 0;
+}
+
+/* Hamburger button — hidden on desktop, shown on phones */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--white);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .nav-toggle { display: block; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--navy);
+    padding: 8px 20px 20px;
+  }
+  /* JavaScript adds .is-open when the hamburger is tapped */
+  .nav-links.is-open { display: flex; }
+}
+
+/* ---------- 5. Hero (big banner on the home page) ---------- */
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  background:
+    linear-gradient(90deg, rgba(12, 35, 64, 0.92) 0%, rgba(12, 35, 64, 0.55) 60%, rgba(12, 35, 64, 0.2) 100%),
+    url("../images/hero.svg") center / cover no-repeat;
+}
+
+.hero h1 { color: var(--white); max-width: 640px; }
+.hero p { max-width: 520px; font-size: 1.2rem; opacity: 0.92; }
+.hero .eyebrow { color: var(--orange); }
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+/* Small "Open now / Closed" pill */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 0.95rem;
+}
+.status::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #9aa5b1;
+}
+.status.is-open::before { background: #3ecf6e; }
+.status.is-closed::before { background: #ff6b6b; }
+
+/* Smaller banner for inner pages */
+.page-hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 64px 0 56px;
+  text-align: center;
+}
+.page-hero h1 { color: var(--white); }
+.page-hero p { color: rgba(255, 255, 255, 0.82); max-width: 560px; margin: 0 auto; }
+
+/* ---------- 6. Cards (quick links + features) ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+a.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(12, 35, 64, 0.18);
+}
+
+.card img {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body { padding: 20px 22px 24px; }
+.card-body p { margin: 0; color: var(--muted); }
+
+.card-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: var(--orange-dark);
+}
+
+/* ---------- 7. Two-column "split" layout ---------- */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.split img { border-radius: var(--radius); box-shadow: var(--shadow); }
+
+@media (max-width: 760px) {
+  .split { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* ---------- 8. Menu page ---------- */
+.menu-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  padding: 8px 18px;
+  border: 2px solid var(--navy);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--navy);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.filter-btn.is-active,
+.filter-btn:hover { background: var(--navy); color: var(--white); }
+
+.menu-category { margin-bottom: 48px; }
+.menu-category[hidden] { display: none; }
+
+.menu-category h2 {
+  border-bottom: 3px solid var(--orange);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 6px 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item { padding: 12px 0; border-bottom: 1px dashed var(--latte); }
+
+.menu-item-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: 600;
+}
+.menu-item-top .price { color: var(--orange-dark); white-space: nowrap; }
+.menu-item p { margin: 2px 0 0; font-size: 0.95rem; color: var(--muted); }
+
+.tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--latte);
+  color: var(--espresso);
+  font-size: 0.72rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+/* ---------- 9. Gallery page ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.gallery figure { margin: 0; }
+
+.gallery button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: zoom-in;
+  background: none;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.gallery button:hover img { transform: scale(1.05); }
+
+.gallery figcaption {
+  padding: 8px 4px 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+/* Lightbox: the full-screen photo viewer */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  background: rgba(8, 18, 32, 0.92);
+}
+.lightbox.is-open { display: flex; }
+.lightbox img { max-height: 80vh; border-radius: var(--radius); }
+.lightbox p { color: var(--white); margin: 0; }
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 22px;
+  background: none;
+  border: 0;
+  color: var(--white);
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+
+/* ---------- 10. Hours & Location page ---------- */
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.hours-table th,
+.hours-table td { padding: 14px 20px; text-align: left; }
+.hours-table tr + tr { border-top: 1px solid var(--latte); }
+.hours-table td { text-align: right; }
+
+/* JavaScript adds .is-today to today's row */
+.hours-table tr.is-today {
+  background: var(--navy);
+  color: var(--white);
+}
+.hours-table tr.is-today th::after {
+  content: " · Today";
+  color: var(--orange);
+}
+
+.info-list { list-style: none; padding: 0; margin: 0; }
+.info-list li { margin-bottom: 18px; }
+.info-list strong { display: block; color: var(--navy); }
+
+.map {
+  width: 100%;
+  height: 360px;
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- 11. Footer ---------- */
+.site-footer {
+  background: var(--espresso);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 48px 0 24px;
+  font-size: 0.95rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+}
+
+.site-footer h3 { color: var(--white); font-size: 1.1rem; }
+.site-footer a { color: rgba(255, 255, 255, 0.85); }
+.site-footer ul { list-style: none; margin: 0; padding: 0; }
+.site-footer li { margin-bottom: 6px; }
+
+.footer-bottom {
+  margin-top: 36px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  font-size: 0.85rem;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hours &amp; Location | Plains &amp; Pour Coffee</title>
+  <meta name="description" content="Hours, address, parking and directions for Plains & Pour Coffee in Auburn, AL.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== Header / navigation (same on every page) ===== -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="logo" href="index.html">
+        <img src="images/logo.svg" alt="" width="36" height="36">
+        Plains <span>&amp;</span> Pour
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Photos</a></li>
+        <li><a href="hours.html" aria-current="page">Hours &amp; Location</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Visit us</span>
+        <h1>Hours &amp; Location</h1>
+        <p>Downtown Auburn, a short walk from campus.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <h2>Hours</h2>
+          <table class="hours-table">
+            <!-- main.js builds these rows from the HOURS list and highlights today -->
+            <tbody data-hours-table></tbody>
+          </table>
+          <p><em>Home football Saturdays: we open at 6 AM. Closed Thanksgiving and Christmas Day.</em></p>
+        </div>
+        <div>
+          <h2>Find us</h2>
+          <ul class="info-list">
+            <li><strong>Address</strong>123 Example Ave, Auburn, AL 36830</li>
+            <li><strong>Phone</strong><a href="tel:+13345550142">(334) 555-0142</a></li>
+            <li><strong>Parking</strong>Free street parking after 5 PM, plus the downtown city deck one block away.</li>
+            <li><strong>Wi-Fi</strong>Free and fast. Ask the barista for the password.</li>
+          </ul>
+          <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&amp;query=Auburn+AL+36830" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <iframe class="map" title="Map of downtown Auburn, Alabama"
+          src="https://www.google.com/maps?q=Downtown+Auburn,+AL&amp;output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Plains &amp; Pour Coffee</h3>
+        <p>123 Example Ave<br>Auburn, AL 36830<br><a href="tel:+13345550142">(334) 555-0142</a></p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Photos</a></li>
+          <li><a href="hours.html">Hours &amp; Location</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Say hello</h3>
+        <ul>
+          <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">© <span data-year></span> Plains &amp; Pour Coffee · A demo website, not a real business.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

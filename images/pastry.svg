@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#ead9c1"/>
+  <rect y="420" width="800" height="180" fill="#c9a77f"/>
+  <!-- plate -->
+  <ellipse cx="400" cy="430" rx="320" ry="80" fill="#fff"/>
+  <ellipse cx="400" cy="425" rx="260" ry="58" fill="#f1ebe2"/>
+  <!-- croissant -->
+  <g fill="#d9933f" stroke="#a3601f" stroke-width="4">
+    <path d="M190 420 q-30 -60 40 -90 q40 -10 60 30 z"/>
+    <path d="M610 420 q30 -60 -40 -90 q-40 -10 -60 30 z"/>
+    <path d="M250 360 q30 -110 150 -110 q120 0 150 110 q-150 70 -300 0z"/>
+    <path d="M300 345 q100 -170 200 0" fill="none"/>
+    <path d="M345 330 q55 -130 110 0" fill="none"/>
+  </g>
+  <!-- biscuit -->
+  <g transform="translate(560 140)">
+    <rect x="-70" y="-50" width="140" height="100" rx="24" fill="#e6b877"/>
+    <rect x="-70" y="-50" width="140" height="40" rx="20" fill="#c98d45"/>
+  </g>
+  <text x="140" y="120" font-family="Georgia, serif" font-size="40" fill="#3b2416" font-style="italic">fresh daily</text>
+</svg>

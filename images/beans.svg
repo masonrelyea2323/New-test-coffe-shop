@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#3b2416"/>
+  <g id="b">
+    <ellipse rx="34" ry="22" fill="#5a331c"/>
+    <path d="M-30 0 q30 -10 60 0" fill="none" stroke="#2a170c" stroke-width="5"/>
+  </g>
+  <g>
+    <use href="#b" transform="translate(80 70) rotate(20)"/><use href="#b" transform="translate(180 50) rotate(-30)"/>
+    <use href="#b" transform="translate(290 90) rotate(60)"/><use href="#b" transform="translate(400 60) rotate(10)"/>
+    <use href="#b" transform="translate(510 100) rotate(-50)"/><use href="#b" transform="translate(620 60) rotate(35)"/>
+    <use href="#b" transform="translate(730 90) rotate(-10)"/><use href="#b" transform="translate(60 180) rotate(-40)"/>
+    <use href="#b" transform="translate(170 160) rotate(80)"/><use href="#b" transform="translate(250 210) rotate(5)"/>
+    <use href="#b" transform="translate(360 170) rotate(-70)"/><use href="#b" transform="translate(460 210) rotate(25)"/>
+    <use href="#b" transform="translate(570 180) rotate(-20)"/><use href="#b" transform="translate(680 200) rotate(55)"/>
+    <use href="#b" transform="translate(100 290) rotate(30)"/><use href="#b" transform="translate(200 310) rotate(-60)"/>
+    <use href="#b" transform="translate(620 300) rotate(-35)"/><use href="#b" transform="translate(730 320) rotate(15)"/>
+    <use href="#b" transform="translate(60 410) rotate(70)"/><use href="#b" transform="translate(160 430) rotate(-15)"/>
+    <use href="#b" transform="translate(640 420) rotate(40)"/><use href="#b" transform="translate(740 450) rotate(-55)"/>
+    <use href="#b" transform="translate(90 530) rotate(-25)"/><use href="#b" transform="translate(200 540) rotate(45)"/>
+    <use href="#b" transform="translate(600 540) rotate(-5)"/><use href="#b" transform="translate(710 550) rotate(65)"/>
+  </g>
+  <!-- burlap bag label -->
+  <rect x="270" y="270" width="260" height="270" rx="18" fill="#cfa877"/>
+  <rect x="290" y="290" width="220" height="230" rx="10" fill="none" stroke="#8a6238" stroke-width="4" stroke-dasharray="10 8"/>
+  <text x="400" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#3b2416">ETHIOPIA</text>
+  <text x="400" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#5a331c">Yirgacheffe</text>
+  <text x="400" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" letter-spacing="3" fill="#5a331c">LIGHT ROAST</text>
+</svg>

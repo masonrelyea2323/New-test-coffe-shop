@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plains &amp; Pour Coffee | Auburn, AL</title>
+  <meta name="description" content="Plains & Pour is a neighborhood coffee shop in Auburn, Alabama serving espresso, pour-overs, cold brew and fresh pastries.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== Header / navigation (same on every page) ===== -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="logo" href="index.html">
+        <img src="images/logo.svg" alt="" width="36" height="36">
+        Plains <span>&amp;</span> Pour
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Photos</a></li>
+        <li><a href="hours.html">Hours &amp; Location</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Hero banner ===== -->
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Auburn, Alabama · Est. 2019</span>
+        <h1>Good coffee on the Loveliest Village on the Plains.</h1>
+        <p>Small-batch roasts, flaky pastries, and a cozy corner to study, catch up, or recover from game day.</p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="menu.html">See the Menu</a>
+          <a class="btn btn--ghost" href="hours.html">Hours &amp; Directions</a>
+        </div>
+        <!-- main.js fills this in with "Open now" or "Closed" -->
+        <div class="status" data-open-status>Checking today's hours…</div>
+      </div>
+    </section>
+
+    <!-- ===== Quick links to the other pages ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-intro">
+          <span class="eyebrow">Explore</span>
+          <h2>Everything you need, one tap away</h2>
+        </div>
+        <div class="card-grid">
+          <a class="card" href="menu.html">
+            <img src="images/latte.svg" alt="Latte with rosetta latte art" loading="lazy">
+            <div class="card-body">
+              <h3>Menu</h3>
+              <p>Espresso drinks, pour-overs, teas, and baked goods made each morning.</p>
+              <span class="card-link">View menu →</span>
+            </div>
+          </a>
+          <a class="card" href="gallery.html">
+            <img src="images/interior.svg" alt="Inside the coffee shop" loading="lazy">
+            <div class="card-body">
+              <h3>Photos</h3>
+              <p>Take a peek at the shop, our drinks, and the people behind the bar.</p>
+              <span class="card-link">Browse photos →</span>
+            </div>
+          </a>
+          <a class="card" href="hours.html">
+            <img src="images/storefront.svg" alt="The Plains and Pour storefront" loading="lazy">
+            <div class="card-body">
+              <h3>Hours &amp; Location</h3>
+              <p>Open early for 8 AMs, late on Thursdays. Just off College Street, downtown.</p>
+              <span class="card-link">Plan a visit →</span>
+            </div>
+          </a>
+          <a class="card" href="about.html">
+            <img src="images/beans.svg" alt="Bag of Ethiopian coffee beans" loading="lazy">
+            <div class="card-body">
+              <h3>Our Story</h3>
+              <p>How two Auburn grads turned a garage roaster into a downtown hangout.</p>
+              <span class="card-link">Read more →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featured drinks ===== -->
+    <section class="section section--alt">
+      <div class="container split">
+        <img src="images/coldbrew.svg" alt="Iced cold brew with cream" loading="lazy">
+        <div>
+          <span class="eyebrow">Fan favorite</span>
+          <h2>The War Eagle Cold Brew</h2>
+          <p>Steeped for 18 hours, finished with house-made honey-vanilla cream and a pinch of sea salt. It's what we hand to every nervous freshman on move-in day, and it's what they come back for at graduation.</p>
+          <a class="btn btn--primary" href="menu.html">Find it on the menu</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">Baked in-house</span>
+          <h2>Pastries worth waking up for</h2>
+          <p>Butter croissants, buttermilk biscuits, and a rotating seasonal scone, all baked before sunrise. When they're gone, they're gone, so come early on Saturdays.</p>
+          <a class="btn btn--primary" href="menu.html#food">See the bakery case</a>
+        </div>
+        <img src="images/pastry.svg" alt="Croissant and biscuit on a plate" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Plains &amp; Pour Coffee</h3>
+        <p>123 Example Ave<br>Auburn, AL 36830<br><a href="tel:+13345550142">(334) 555-0142</a></p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Photos</a></li>
+          <li><a href="hours.html">Hours &amp; Location</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Say hello</h3>
+        <ul>
+          <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">© <span data-year></span> Plains &amp; Pour Coffee · A demo website, not a real business.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
