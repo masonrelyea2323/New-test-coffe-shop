@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#bfd8ea"/>
+  <rect y="500" width="800" height="100" fill="#9a9a9a"/>
+  <rect y="490" width="800" height="14" fill="#c4c4c4"/>
+  <!-- brick building -->
+  <rect x="80" y="80" width="640" height="420" fill="#a5513a"/>
+  <g stroke="#8e432f" stroke-width="3">
+    <path d="M80 120 H720 M80 160 H720 M80 200 H720 M80 240 H720"/>
+  </g>
+  <!-- sign -->
+  <rect x="160" y="100" width="480" height="70" rx="8" fill="#0c2340"/>
+  <text x="400" y="147" text-anchor="middle" font-family="Georgia, serif" font-size="36" font-weight="700" fill="#fff">Plains <tspan fill="#e87722">&amp;</tspan> Pour</text>
+  <!-- awning -->
+  <path d="M110 250 H690 L720 310 H80 Z" fill="#e87722"/>
+  <g fill="#fff"><path d="M150 250 h50 l10 60 h-50z"/><path d="M270 250 h50 l5 60 h-50z"/><path d="M390 250 h50 l0 60 h-50z"/><path d="M510 250 h50 l-5 60 h-50z"/><path d="M630 250 h40 l20 60 h-50z"/></g>
+  <!-- windows & door -->
+  <rect x="120" y="320" width="220" height="170" fill="#f6d79a"/>
+  <rect x="460" y="320" width="220" height="170" fill="#f6d79a"/>
+  <rect x="355" y="320" width="90" height="180" fill="#0c2340"/>
+  <circle cx="430" cy="415" r="5" fill="#e87722"/>
+  <g stroke="#5a2a1c" stroke-width="6" fill="none"><rect x="120" y="320" width="220" height="170"/><rect x="460" y="320" width="220" height="170"/><path d="M230 320 V490 M570 320 V490"/></g>
+  <!-- planters -->
+  <rect x="90" y="460" width="40" height="40" fill="#5a2a1c"/><circle cx="110" cy="450" r="28" fill="#4f8a4b"/>
+  <rect x="670" y="460" width="40" height="40" fill="#5a2a1c"/><circle cx="690" cy="450" r="28" fill="#4f8a4b"/>
+</svg>
